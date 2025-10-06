@@ -1,0 +1,11 @@
+{
+  "name": "assignment3",
+  "version": "1.0.0",
+  "description": "Assignment 3 for INET2005 - Building a RESTful API with MongoDB and Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Kaulback",
+  "license": "ISC"
+}

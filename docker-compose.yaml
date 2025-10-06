@@ -1,0 +1,12 @@
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_DATABASE: mydatabase # Optional: specify a default database
+    volumes:
+      - mongodb_data:/data/db
+      - ./scripts:/docker-entrypoint-initdb.d # Mount a local 'scripts' directory
+volumes:
+  mongodb_data:
