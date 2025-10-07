@@ -1,24 +1,22 @@
 // --- IMPORTS ---
 const express = require('express');
-const { getDocumentCount } = require('./config/db_collection_access');
+const productsRouter = require('./routes/productsRouter');
 require('dotenv').config()
 
 // --- APP SETUP ---
 const app = express();
 const PORT = process.env.PORT;
 
+// --- ROUTES ---
+app.use('/products', productsRouter);
+
 // --- TEST ---
 app.get('/', async (req,res) => {
-    const count = await getDocumentCount();
     res.json({
         status: 'ok',
-        time: new Date().toISOString(),
-        collectionCount: count 
+        time: new Date().toISOString()
     });
 });
-
-// --- ROUTES ---
-
 
 // --- START SERVER ---
 app.listen(PORT, () => {
