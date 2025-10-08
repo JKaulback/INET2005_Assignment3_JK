@@ -3,8 +3,8 @@ const { MongoClient } = require("mongodb");
 require('dotenv').config({ path: __dirname + '/../.env' });
 
 // --- VARIABLE SETUP ---
-const DB_URI = process.env.MONGODB_URI;
-const DB_NAME = process.env.COMPANY_DB_NAME;
+const DB_URI = process.env.MONGODB_URI || 'mongodb://mongodb:27017';
+const DB_NAME = process.env.COMPANY_DB_NAME || 'CompanyDB';
 
 let _client;
 let _db;
