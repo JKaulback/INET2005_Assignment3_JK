@@ -30,7 +30,7 @@ async function getAllProducts(req, res) {
         const totalPages = Math.ceil(totalCount / limit);
 
         // Set response
-        res.json({
+        res.status(200).json({
             page,
             limit,
             totalPages,
@@ -66,7 +66,7 @@ async function getProductById(req, res) {
         if (!product) return res.status(404).json({ error: 'Product not found' });
 
         // Set response with product
-        res.json(product);
+        res.status(200).json(product);
 
     } catch (error) {
         // Handle a failure to fetch the product
