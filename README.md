@@ -24,7 +24,7 @@ Before you begin, make sure you have:
 
 2. **🚀 Start the services using Docker Compose:**
    ```powershell
-   docker-compose up -d
+   docker-compose up -d --build
    ```
 
 3. **⏳ Wait for both containers to start. Check the status with:**
